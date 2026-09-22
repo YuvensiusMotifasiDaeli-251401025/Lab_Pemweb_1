@@ -1,0 +1,340 @@
+/* Reset Dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    scroll-behavior: smooth; /* Efek scroll halus */
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c3e50;
+    color: #fff;
+    padding: 1.1rem 5%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.skills-section {
+    background-color: #f8f9fa;
+}
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skill-card {
+    background-color: #ffffff;
+    width: 180px; /* Lebar kartu */
+    height: 180px; /* Tinggi kartu (harus sama dengan lebar) */
+    border-radius: 50%; /* Membuat bentuk bulat sempurna */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: #2c3e50;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+    border: 4px solid transparent;
+}
+
+.skill-card:hover {
+    transform: scale(1.1) rotate(10deg); /* Efek membesar dan sedikit miring */
+    border-color: #3498db; /* Memunculkan garis biru */
+    color: #3498db;
+    box-shadow: 0 12px 25px rgba(52, 152, 219, 0.2);
+}
+.projects-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-card {
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card p {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.view-project-btn {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    align-self: flex-start;
+}
+
+.view-project-btn:hover {
+    background-color: #0056b3;
+}
+
+.modal-gambar {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); 
+    justify-content: center;
+    align-items: center;
+}
+
+
+.modal-gambar:target {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90vh;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease; 
+}
+
+
+.modal-content img {
+    max-width: 100%;
+    max-height: 80vh;
+    display: block;
+    border-radius: 4px;
+}
+
+
+.close-btn {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #ff4d4d;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    background: #cc0000;
+}
+
+
+@keyframes zoomIn {
+    from { transform: scale(0.7); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+
+section {
+    padding: 5rem 5%;
+    text-align: center;
+}
+
+section h2 {
+    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    color: #2c3e50;
+}
+
+.about-section {
+    background-color: white;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+
+.about-text {
+    flex: 1; 
+    text-align: left; 
+}
+
+.about-text h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    color: #555;
+    text-align: justify;
+}
+
+
+.about-image {
+    flex: 1;
+    display: flex;
+    justify-content: center; 
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 300px;
+    aspect-ratio: 3 / 4;
+    border-radius: 50%; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    object-fit: cover; 
+    border: 3px solid #2c3e50;
+    object-position: center top; 
+}
+
+
+.contact-section p {
+    margin-bottom: 2rem;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.social-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.social-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    color: white; 
+}
+
+
+.wa {
+    background-color: #25D366; 
+}
+
+.ig {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); /* Gradasi Instagram */
+}
+
+.in {
+    background-color: #0077B5; 
+}
+
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1.1rem;
+}
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about-section {
+        flex-direction: column-reverse; 
+        gap: 2rem;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center; 
+    }
+
+    .about-text h1 {
+        font-size: 2.2rem; 
+    }
+
+    .about-image img {
+        max-width: 250px; 
+    }
+
+    section {
+        padding: 4rem 1rem;
+    }
+}
+
+
